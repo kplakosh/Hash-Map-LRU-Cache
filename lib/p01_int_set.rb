@@ -1,5 +1,3 @@
-require 'byebug'
-
 class MaxIntSet
   def initialize(max)
     @store = Array.new(max, false)
@@ -78,7 +76,6 @@ class ResizingIntSet
     self[num] << num
     @count += 1
     resize! if num_buckets < @count
-    # byebug
   end
 
   def remove(num)
